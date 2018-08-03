@@ -1,5 +1,4 @@
 require_relative 'config/environment'
-require 'pry'
 
 class App < Sinatra::Base
   # Write your code here!
@@ -38,11 +37,8 @@ class App < Sinatra::Base
     @operation = params[:operation]
     @num1 = params[:number1].to_i 
     @num2 = params[:number2].to_i 
-    
-    binding.pry 
-    
+
     case @operation 
-    binding.pry 
     when "add"
       @num1 + @num2 
     when "subtract"
