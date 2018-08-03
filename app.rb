@@ -40,16 +40,17 @@ class App < Sinatra::Base
 
     case @operation 
     when "add"
-      @num1 + @num2 
+      @answer = @num1 + @num2 
     when "subtract"
-      @num1 - @num2 
+      @answer = @num1 - @num2 
     when "multiply"
-      @num1 * @num2 
+      @answer = @num1 * @num2 
     when "divide"
-      @num1 / @num2
+      @answer = @num1 / @num2
     else 
-      "Not a valid operation."
+      @answer = "Not a valid operation."
     end
     
+    @answer.to_s 
   end
 end
